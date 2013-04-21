@@ -72,7 +72,7 @@ class Crawler(object):
     def save(self, path='/tmp/', name='index.html'):
         if not os.path.exists(path):
             os.makedirs(path)
-        fp = open(path + name, 'w')
+        fp = open('%s%s' % (path, name), 'w')
         fp.write(str(self.soup))
         fp.close()
 
